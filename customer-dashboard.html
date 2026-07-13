@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — Farm2Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dash-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="dash-sidebar">
+    <a href="index.html" class="brand">
+      <svg class="logo-mark" width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="logo-leaf" d="M24 5C12 5 7 17 7 26c0 9.4 7.6 17 17 17s17-7.6 17-17C41 17 36 5 24 5Z" fill="url(#logoGradC)"/>
+        <path class="logo-drop" d="M24 30c-3.5 0-6-2.6-6-6 0-4 6-11 6-11s6 7 6 11c0 3.4-2.5 6-6 6Z" fill="#E8B923" opacity=".9"/>
+        <path class="logo-vein" d="M24 12v26M24 22c-4 1.5-7 3.5-9 7M24 27c4 1.2 7.5 3 9.5 6.5" stroke="#e9f2ea" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        <defs><linearGradient id="logoGradC" x1="7" y1="5" x2="41" y2="43" gradientUnits="userSpaceOnUse"><stop stop-color="#A7C9AC"/><stop offset="1" stop-color="#EFE3B8"/></linearGradient></defs>
+      </svg>
+      Farm2Home
+    </a>
+
+    <nav class="dash-nav">
+      <a href="#" class="active"><span class="ico">🏠</span> Overview</a>
+      <a href="#orders"><span class="ico">📦</span> My Orders</a>
+      <a href="#wishlist"><span class="ico">❤️</span> Wishlist</a>
+      <a href="products.html"><span class="ico">🛒</span> Shop produce</a>
+      <div class="divider-label">Account</div>
+      <a href="#"><span class="ico">⚙️</span> Settings</a>
+      <a href="index.html"><span class="ico">↩️</span> Log out</a>
+    </nav>
+
+    <div class="dash-user-card">
+      <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=100&q=80" alt="Customer avatar">
+      <div><strong>Divya Ramesh</strong><span>Salem, Tamil Nadu</span></div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="dash-main">
+    <button class="mobile-dash-toggle btn btn-ghost" style="margin-bottom:16px;">☰ Menu</button>
+
+    <div class="dash-topbar reveal">
+      <div>
+        <h1>Welcome back, Divya 🍅</h1>
+        <p>Your basket is one click from tomorrow's doorstep delivery.</p>
+      </div>
+      <div class="dash-actions">
+        <a href="products.html" class="btn btn-primary">+ Shop fresh produce</a>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stat-grid">
+      <div class="stat-card reveal" style="animation-delay:.05s;">
+        <span class="stat-trend up">▲ 2</span>
+        <div class="stat-icon">📦</div>
+        <div class="stat-value" data-count="27">0</div>
+        <div class="stat-label">Total orders</div>
+      </div>
+      <div class="stat-card reveal" style="animation-delay:.12s;">
+        <span class="stat-trend up">Active</span>
+        <div class="stat-icon">🚚</div>
+        <div class="stat-value" data-count="1">0</div>
+        <div class="stat-label">Deliveries on the way</div>
+      </div>
+      <div class="stat-card reveal" style="animation-delay:.19s;">
+        <span class="stat-trend up">▲ 1</span>
+        <div class="stat-icon">❤️</div>
+        <div class="stat-value" data-count="4">0</div>
+        <div class="stat-label">Saved / wishlist</div>
+      </div>
+      <div class="stat-card reveal" style="animation-delay:.26s;">
+        <span class="stat-trend up">▲ 60</span>
+        <div class="stat-icon">🌿</div>
+        <div class="stat-value" data-count="1240">0</div>
+        <div class="stat-label">Loyalty points</div>
+      </div>
+    </div>
+
+    <!-- ORDER TRACKING -->
+    <div class="timeline-card reveal">
+      <div class="head">
+        <h3>Order #F2H-3142 is on its way</h3>
+        <span class="eyebrow">Arriving today, 6:00 PM</span>
+      </div>
+      <div class="order-track">
+        <div class="track-step done"><div class="track-line"></div><div class="dot">✓</div><div class="label">Placed</div></div>
+        <div class="track-step done"><div class="track-line"></div><div class="dot">✓</div><div class="label">Packed</div></div>
+        <div class="track-step active"><div class="track-line"></div><div class="dot">🚚</div><div class="label">On the way</div></div>
+        <div class="track-step"><div class="track-line"></div><div class="dot">🏠</div><div class="label">Delivered</div></div>
+      </div>
+    </div>
+
+    <!-- ORDERS TABLE -->
+    <div class="table-card reveal" id="orders">
+      <div class="table-head"><h3>Order history</h3><span class="eyebrow">Last 5</span></div>
+      <table class="dash-table">
+        <thead><tr><th>Order</th><th>Items</th><th>Farm</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>#F2H-3142</td><td>Tomatoes, Spinach, Corn</td><td>Green Valley Farm</td><td>₹260</td><td><span class="status-pill transit">In transit</span></td></tr>
+          <tr><td>#F2H-3121</td><td>Mangoes, Strawberries</td><td>Konkan Orchard</td><td>₹340</td><td><span class="status-pill delivered">Delivered</span></td></tr>
+          <tr><td>#F2H-3108</td><td>A2 Milk, Paneer</td><td>Green Meadow Dairy</td><td>₹220</td><td><span class="status-pill delivered">Delivered</span></td></tr>
+          <tr><td>#F2H-3092</td><td>Brown Rice, Toor Dal</td><td>Paddy Co-op</td><td>₹190</td><td><span class="status-pill delivered">Delivered</span></td></tr>
+          <tr><td>#F2H-3071</td><td>Carrots, Bell Peppers</td><td>Sunrise Organics</td><td>₹115</td><td><span class="status-pill delivered">Delivered</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- WISHLIST -->
+    <div class="section-head reveal" id="wishlist" style="margin-bottom:20px;">
+      <span class="eyebrow">Saved for later</span>
+      <h2 style="font-size:26px;">Your wishlist</h2>
+      <p>Items you've saved — add straight to your basket whenever you're ready.</p>
+    </div>
+    <div class="wishlist-grid" id="wishlistGrid"></div>
+
+    <!-- RECOMMENDATIONS -->
+    <div class="section-head reveal" style="margin-bottom:20px;">
+      <span class="eyebrow">Picked for you</span>
+      <h2 style="font-size:26px;">Recommended this week</h2>
+      <p>Based on what's fresh near Salem right now.</p>
+    </div>
+    <div class="produce-grid" id="recommendGrid"></div>
+
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
