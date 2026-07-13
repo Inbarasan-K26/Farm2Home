@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — Farm2Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg class="logo-mark" width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="logo-leaf" d="M24 5C12 5 7 17 7 26c0 9.4 7.6 17 17 17s17-7.6 17-17C41 17 36 5 24 5Z" fill="url(#logoGrad)"/>
+        <path class="logo-drop" d="M24 30c-3.5 0-6-2.6-6-6 0-4 6-11 6-11s6 7 6 11c0 3.4-2.5 6-6 6Z" fill="#E8B923" opacity=".9"/>
+        <path class="logo-vein" d="M24 12v26M24 22c-4 1.5-7 3.5-9 7M24 27c4 1.2 7.5 3 9.5 6.5" stroke="#12301F" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        <defs><linearGradient id="logoGrad" x1="7" y1="5" x2="41" y2="43" gradientUnits="userSpaceOnUse"><stop stop-color="#74A57F"/><stop offset="1" stop-color="#1E4530"/></linearGradient></defs>
+      </svg>
+      Farm2Home
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="products.html">Produce</a></li>
+      <li><a href="index.html#why">Why us</a></li>
+      <li><a href="index.html#reviews">Reviews</a></li>
+    </ul>
+    <div class="nav-cta">
+      <span class="cart-pill">🧺 Basket <span class="cart-count" id="cartCount">0</span></span>
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-primary">Sign up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="container breadcrumb">
+  <a href="index.html">Home</a><span>/</span><a href="products.html">Produce</a><span>/</span><span id="crumbCategory">…</span><span>/</span><span id="crumbName">…</span>
+</div>
+
+<!-- DETAIL -->
+<section class="detail">
+  <div class="container detail-grid">
+
+    <div class="gallery reveal">
+      <div class="gallery-main"><img id="mainImage" src="" alt=""></div>
+      <div class="gallery-thumbs" id="thumbRow"></div>
+    </div>
+
+    <div class="detail-info reveal">
+      <span class="eyebrow" id="detailCategory">Category</span>
+      <h1 id="detailName">Loading…</h1>
+
+      <div class="farm-row">
+        <span id="detailFarm">Farm name</span>
+        <span class="dot"></span>
+        <span id="detailDistance">distance</span>
+        <span class="dot"></span>
+        <span id="detailBadge">badge</span>
+      </div>
+
+      <div class="tag-row" id="tagRow"></div>
+
+      <div class="detail-price">
+        <span class="amount" id="detailPrice">₹0</span>
+        <span class="unit">/ <span id="detailUnit">kg</span></span>
+      </div>
+
+      <p class="detail-desc" id="detailDesc">Loading description…</p>
+
+      <div class="purchase-row">
+        <div class="qty-stepper">
+          <button type="button" id="qtyMinus">–</button>
+          <span id="qtyValue">1</span>
+          <button type="button" id="qtyPlus">+</button>
+        </div>
+        <button class="btn btn-primary" id="addToBasketBtn">Add to basket</button>
+      </div>
+
+      <div class="info-rows">
+        <div class="info-row"><span class="ico">🌱</span><div><strong>Freshness promise</strong><span>Harvested within 24 hours of delivery, every time.</span></div></div>
+        <div class="info-row"><span class="ico">🧊</span><div><strong>Storage tip</strong><span>Keep refrigerated and use within a few days for best flavour.</span></div></div>
+        <div class="info-row"><span class="ico">🚚</span><div><strong>Delivery</strong><span>Order before 6pm for delivery to your door by tomorrow morning.</span></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="related">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">You might also like</span>
+      <h2 id="relatedHeading">More from this category</h2>
+    </div>
+    <div class="produce-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="color:#fff;">
+          <svg class="logo-mark" width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="logo-leaf" d="M24 5C12 5 7 17 7 26c0 9.4 7.6 17 17 17s17-7.6 17-17C41 17 36 5 24 5Z" fill="url(#logoGradFooter)"/>
+            <path class="logo-drop" d="M24 30c-3.5 0-6-2.6-6-6 0-4 6-11 6-11s6 7 6 11c0 3.4-2.5 6-6 6Z" fill="#E8B923" opacity=".9"/>
+            <path class="logo-vein" d="M24 12v26M24 22c-4 1.5-7 3.5-9 7M24 27c4 1.2 7.5 3 9.5 6.5" stroke="#0e2318" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            <defs><linearGradient id="logoGradFooter" x1="7" y1="5" x2="41" y2="43" gradientUnits="userSpaceOnUse"><stop stop-color="#74A57F"/><stop offset="1" stop-color="#0e2318"/></linearGradient></defs>
+          </svg>
+          Farm2Home
+        </a>
+        <p style="margin-top:14px; font-size:14px; color:#a9c2aa; max-width:280px;">Connecting local farms to local homes, one harvest at a time.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul><li><a href="index.html#how">How it works</a></li><li><a href="products.html">Produce</a></li><li><a href="index.html#why">Why us</a></li></ul>
+      </div>
+      <div>
+        <h5>Account</h5>
+        <ul><li><a href="login.html">Log in</a></li><li><a href="signup.html">Sign up</a></li></ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul><li><a href="#">hello@farm2home.in</a></li><li><a href="#">Erode, Tamil Nadu</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Farm2Home. All harvests reserved.</span>
+      <span>Made with 🌱 for local growers</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
