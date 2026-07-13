@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — Farm2Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-shell">
+
+  <!-- LEFT VISUAL -->
+  <div class="auth-visual">
+    <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=900&q=80" alt="Farm field at sunrise">
+    <a href="index.html" class="brand">
+      <svg class="logo-mark" width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="logo-leaf" d="M24 5C12 5 7 17 7 26c0 9.4 7.6 17 17 17s17-7.6 17-17C41 17 36 5 24 5Z" fill="url(#logoGradA)"/>
+        <path class="logo-drop" d="M24 30c-3.5 0-6-2.6-6-6 0-4 6-11 6-11s6 7 6 11c0 3.4-2.5 6-6 6Z" fill="#E8B923" opacity=".9"/>
+        <path class="logo-vein" d="M24 12v26M24 22c-4 1.5-7 3.5-9 7M24 27c4 1.2 7.5 3 9.5 6.5" stroke="#0e2318" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        <defs><linearGradient id="logoGradA" x1="7" y1="5" x2="41" y2="43" gradientUnits="userSpaceOnUse"><stop stop-color="#A7C9AC"/><stop offset="1" stop-color="#EFE3B8"/></linearGradient></defs>
+      </svg>
+      Farm2Home
+    </a>
+    <div class="seed-field" data-count="12"></div>
+    <span class="floating-leaf" style="top:18%; left:14%;">🍃</span>
+    <span class="floating-leaf" style="top:34%; right:16%; animation-delay:1.5s;">🌾</span>
+    <span class="floating-leaf" style="bottom:38%; left:22%; animation-delay:3s;">🍃</span>
+    <div class="content">
+      <p class="auth-quote">"Since switching to Farm2Home, my kids actually ask for vegetables."</p>
+      <p class="auth-quote-who">— Divya R., home cook, Salem</p>
+    </div>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="auth-form-side">
+    <div class="auth-card">
+      <span class="eyebrow">Welcome back</span>
+      <h1>Log in</h1>
+      <p class="sub">Pick up right where you left off — your basket's waiting.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="pass-wrap">
+            <input type="password" id="password" placeholder="Enter your password" required minlength="6">
+            <button type="button" class="pass-toggle" data-target="password">👁️</button>
+          </div>
+        </div>
+
+        <div class="row-between">
+          <label class="checkbox"><input type="checkbox"> Remember me</label>
+          <a href="#" class="link-accent">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Log in to Farm2Home</button>
+      </form>
+
+      <div class="divider">or continue with</div>
+      <div class="social-row">
+        <button class="social-btn">🔍 Google</button>
+        <button class="social-btn">📘 Facebook</button>
+      </div>
+
+      <p class="switch-line">New to Farm2Home? <a href="signup.html" class="link-accent">Create an account</a></p>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast">🌱 Logged in! Redirecting to your basket…</div>
+
+<script src="script.js"></script>
+</body>
+</html>
